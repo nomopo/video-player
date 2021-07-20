@@ -17,6 +17,7 @@ body{
     aspect-ratio:16/9;
     vertical-align: middle;
     object-fit: cover;
+    border-radius: 15px;
 }
 .player-title{
     color: white;
