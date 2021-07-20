@@ -6,17 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Player</title>
-    <link rel="stylesheet" src="./assets/css/styles.css">
-    <script src="./assets/js/main.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-
-        <h1>Video Player</h1>
-        <button class="button" id="backward"></button>
-        <button class="button" id="pause"></button>
-        <button class="button" id="play"></button>
-        <button class="button" id="forward"></button>
-        <video controls autoplay muted src"./assets/videos/lofi.mp4"></video>
-
+<div class="wrapper">
+    <div class="player">
+        <video id="video"  poster="./assets/images/poster.jpg" src="./assets/videos/lofi.mp4"></video>
+        <div class="player-overlay">
+            <h2 class="player-title">Música para programar</h2>
+            <div class="player-actions">
+                <button class="button" id="backward" aria-label="Rebobinar 10 segundos" title="Rebobinar 10 segundos"></button>
+                <button class="button" id="pause" hidden aria-label="Pausar vídeo" title="Pausar vídeo"></button>
+                <button class="button" id="play" aria-label="Reproducir vídeo" title="Reproducir vídeo"></button>
+                <button class="button" id="forward" aria-label="Adelantar 10 segundos" title="Adelantar 10 segundos"></button>
+            </div>
+            <div class="player-progress">
+                <input id="progress" type="range" min="0" value="0" step="1">
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./js/main.js"></script>
 </body>
 </html>
